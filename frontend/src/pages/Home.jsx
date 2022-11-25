@@ -39,7 +39,7 @@ export default function Home() {
           </select>
         </div>
 
-        <Link to="/dashboard">
+        <Link to="/product-list">
           <Button className="btn-success m-2">Ir a comprar</Button>
         </Link>
       </div>

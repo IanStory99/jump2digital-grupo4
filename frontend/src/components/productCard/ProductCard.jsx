@@ -8,6 +8,7 @@ const ProductCard = ({ product, cartSetter, cart }) => {
     return cartSetter(arrayWithoutRemovedItem);
   };
 
+  const newArray = [...cart];
   return (
     <div className="product-card-item">
       <img
@@ -32,9 +33,9 @@ const ProductCard = ({ product, cartSetter, cart }) => {
         </button>
         <button
           onClick={() => {
-            cart.push(product);
-            cartSetter(cart);
-            console.log(cart);
+            newArray.push(product);
+            cartSetter(newArray);
+            console.log(cart.length);
           }}
           className="cart-button-add"
         >

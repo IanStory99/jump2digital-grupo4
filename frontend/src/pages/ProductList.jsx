@@ -41,9 +41,7 @@ const products = [
   singleProduct4,
 ];
 
-const ProductList = () => {
-  const cartArray = [];
-  const [cart, setCart] = useState(cartArray);
+const ProductList = ({ cart, setCart }) => {
   console.log(cart);
   return (
     <>
@@ -52,7 +50,7 @@ const ProductList = () => {
         <div className="product-list-box">
           {products.map((product, index) => (
             <ProductCard
-              cart={cartArray}
+              cart={cart}
               cartSetter={setCart}
               product={product}
               key={`${product.name}_${index}`}

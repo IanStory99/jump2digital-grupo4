@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 
 import CartModal from "./CartModal";
 
-function Header() {
+function Header({ cart }) {
   const { user, logout } = useAuth();
 
   return (
@@ -26,6 +26,7 @@ function Header() {
       ) : (
         <Stack direction="horizontal" gap={3}>
           <CartModal />
+          <span>{cart.length}</span>
         </Stack>
       )}
     </div>
