@@ -26,7 +26,7 @@ const products = [
 const ProductList = () => {
   return (
     <>
-      <p>Product List Page</p>
+      <h2 className="heading-product-list">Product List Page</h2>
       <div className="product-list-view">
         <div className="product-list-box">
           {products.map((product, index) => (
