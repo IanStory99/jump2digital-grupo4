@@ -6,7 +6,7 @@ const singleProduct = {
   id: 1,
   name: "Product 1",
   type: "Beverage",
-  price: "400",
+  price: 400,
   cusine: "Thai",
   quantity: 0,
 };
@@ -14,7 +14,7 @@ const singleProduct2 = {
   id: 2,
   name: "Product 1",
   type: "Beverage",
-  price: "400",
+  price: 300,
   cusine: "Thai",
   quantity: 0,
 };
@@ -22,7 +22,7 @@ const singleProduct3 = {
   id: 3,
   name: "Product 1",
   type: "Beverage",
-  price: "400",
+  price: 200,
   cusine: "Thai",
   quantity: 0,
 };
@@ -30,7 +30,7 @@ const singleProduct4 = {
   id: 4,
   name: "Product 1",
   type: "Beverage",
-  price: "400",
+  price: 100,
   cusine: "Thai",
   quantity: 0,
 };

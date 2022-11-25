@@ -4,7 +4,7 @@ import "./Checkout.css";
 import ModalCheckout from "../components/ModalCheckout/ModalCheckout";
 
 export default function Checkout({ cart }) {
-  const price = cart.reduce((item, a) => a.price, 0);
+  const price = cart.reduce((item, a) => item + a.price, 0);
   console.log(price);
   return (
     <div className="check-container">
