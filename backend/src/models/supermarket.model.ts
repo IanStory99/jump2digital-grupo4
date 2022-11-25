@@ -18,7 +18,7 @@ export default function (sequelize: Sequelize): typeof SuperMarketModel {
   SuperMarketModel.init(
     {
       id: {
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
