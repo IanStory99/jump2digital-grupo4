@@ -1,0 +1,9 @@
+.product-card-item {
+  display: flex;
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.85) 0px 7px 29px 0px;
+  margin: 20px 0;
+}

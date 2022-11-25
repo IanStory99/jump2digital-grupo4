@@ -1,0 +1,13 @@
+.product-list-view {
+  width: 100vw;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-list-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
