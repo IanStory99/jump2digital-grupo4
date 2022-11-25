@@ -1,4 +1,4 @@
-.home-container {
+.check-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -8,16 +8,19 @@
   align-items: center;
 }
 
-.text-container {
+.check-text-container {
   background-color: rgb(231, 255, 231);
   padding: 20px;
   width: 300px;
   border-radius: 10px;
-  text-align: center;
 }
 
-.text-container select {
-  margin-bottom: 50px;
+.check-text-container li {
+  list-style: none;
+}
+
+.check-text-container ul {
+  padding: 0;
 }
 
 .home-container > img {
