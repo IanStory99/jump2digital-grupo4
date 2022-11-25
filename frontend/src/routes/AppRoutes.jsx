@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import ProtectedRoutes from "../components/protectedRoutes/ProtectedRoutes";
 import Dashboard from "../pages/Dashboard";
+import Checkout from "../pages/Checkout";
 
 export default function AppRoutes() {
   return (
@@ -16,9 +16,8 @@ export default function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route element={<ProtectedRoutes />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Route>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </>
