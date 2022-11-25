@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { BsFillCartFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-export default function CartModal() {
+export default function CartModal({ cart }) {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -13,24 +13,6 @@ export default function CartModal() {
   function navigateTo() {
     navigate("/checkout");
     handleClose();
-  }
-
-  function showInCart() {
-    /* Esta funcion muestra los productos en el carrito y el total */
-    let total = calculateTotal();
-    document.getElementById("cart_list").innerHTML = "";
-
-    for (let item of cart) {
-      document.getElementById("total_price").textContent = total;
-      //document.getElementById('remove').classList.add('btn-danger')
-      document.getElementById("cart_list").innerHTML += `<tr>
-  <th scope="row">${item.name}</th>
-  <td>$${item.price}</td>
-  <td>${item.quantity}</td>
-  <td>$${item.subTotalWithDiscount}</td>
-  <td><button class='btn btn-danger btn-sm' onclick='removeFromCart(${item.id})'>X</button></td>
-  </tr>`;
-    }
   }
 
   return (
@@ -43,7 +25,13 @@ export default function CartModal() {
         <Modal.Header closeButton>
           <Modal.Title>Cart</Modal.Title>
         </Modal.Header>
-        <Modal.Body>List of products</Modal.Body>
+        <Modal.Body>
+          <p>List of products</p>
+          {cart.length > 0 && <p>Hola </p>}
+          {cart.map((item) => {
+            <p>{item.name}</p>;
+          })}
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
