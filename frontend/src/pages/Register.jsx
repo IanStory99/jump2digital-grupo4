@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import { useAuth } from "../components/context/AuthContext";
 
 function Register() {
   const [user, setUser] = useState({
@@ -16,7 +15,7 @@ function Register() {
   });
   const [registerError, setRegisterError] = useState("");
   const [checkboxType, setCheckboxType] = useState("password");
-  const { signUp } = useAuth();
+
   const navigate = useNavigate();
 
   //   logic
