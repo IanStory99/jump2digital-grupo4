@@ -24,7 +24,7 @@ export default function AppRoutes() {
             element={<ProductList setCart={setCart} cart={cart} />}
           />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout cart={cart} />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import CartModal from "./CartModal";
 
 function Header({ cart }) {
-  const { user, logout } = useAuth();
-
   return (
     <div className=" d-flex justify-content-between bg-success bg-opacity-75 p-2">
       <Link
@@ -15,18 +13,10 @@ function Header({ cart }) {
         SIAMI
       </Link>
 
-      {user ? (
-        <Stack direction="horizontal" gap={3}>
-          <Button onClick={logout} className="btn-light py-1">
-            Log out
-          </Button>
-        </Stack>
-      ) : (
-        <Stack direction="horizontal" gap={3}>
-          <CartModal />
-          <span>{cart.length}</span>
-        </Stack>
-      )}
+      <Stack direction="horizontal" gap={3}>
+        <CartModal cart={cart} />
+        <span>{cart.length}</span>
+      </Stack>
     </div>
   );
 }
