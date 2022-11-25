@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import "./Checkout.css";
+import ModalCheckout from "../components/ModalCheckout/ModalCheckout";
 
 export default function Checkout() {
   const data = ["a", "b", "c"];
@@ -8,9 +9,9 @@ export default function Checkout() {
   return (
     <div className="check-container">
       <div className="check-text-container">
-        <h1>Checkout</h1>
+        <h1 style={{ textAlign: "center" }}>Checkout</h1>
         <div>
-          <p>List de Productos</p>
+          <p style={{ textAlign: "center" }}>List de Productos</p>
           {data.map((data, i) => (
             <div key={i + 1}>
               <ul>
@@ -20,9 +21,13 @@ export default function Checkout() {
               </ul>
             </div>
           ))}
-          <p>Total: </p>
+          <h3 style={{ textAlign: "right" }}>Total: 20</h3>
         </div>
-        <Button className="btn-success m-2">Comprar</Button>
+        <div style={{ textAlign: "center" }}>
+          <Button className="btn-success m-2">
+            <ModalCheckout />
+          </Button>
+        </div>
       </div>
     </div>
   );

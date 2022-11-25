@@ -103,6 +103,28 @@ paths:
         500:
           description: 'Server Error'
 
+  /supermarkets:
+    get:
+      tags:
+      - supermarkets
+      summary: Find All Supermarkets
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+  /products:
+    get:
+      tags:
+      - products
+      summary: Find All Products
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
 # definitions
 definitions:
   users:

@@ -1,7 +1,5 @@
-import Button from "react-bootstrap/Button";
 import Stack from "react-bootstrap/Stack";
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 
 import CartModal from "./CartModal";
 
