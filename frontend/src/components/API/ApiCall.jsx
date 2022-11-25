@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const url = "https://jsonplaceholder.typicode.com/todos";
+const url = "";
 
 const ReqStatus = {
   INITIAL: "INITIAL",
@@ -32,7 +32,7 @@ export default function ApiCall() {
 
   return (
     <div>
-      {reqStatus === ReqStatus.LOADING ? (
+      {/*  {reqStatus === ReqStatus.LOADING ? (
         <p>LOADING...</p>
       ) : (
         data.map((data) => (
@@ -44,7 +44,7 @@ export default function ApiCall() {
             </ul>
           </div>
         ))
-      )}
+      )} */}
     </div>
   );
 }

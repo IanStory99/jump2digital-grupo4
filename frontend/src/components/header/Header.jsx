@@ -3,6 +3,8 @@ import Stack from "react-bootstrap/Stack";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
+import CartModal from "./CartModal";
+
 function Header() {
   const { user, logout } = useAuth();
 
@@ -23,12 +25,7 @@ function Header() {
         </Stack>
       ) : (
         <Stack direction="horizontal" gap={3}>
-          <Button as={Link} to="/login" className="btn-light py-1">
-            Login
-          </Button>
-          <Button as={Link} to="/register" className="btn-light py-1">
-            Register
-          </Button>
+          <CartModal />
         </Stack>
       )}
     </div>
