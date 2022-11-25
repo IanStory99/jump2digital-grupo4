@@ -16,7 +16,7 @@ export default function (sequelize: Sequelize): typeof ProductModel {
   ProductModel.init(
     {
       id: {
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
