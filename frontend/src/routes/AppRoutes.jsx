@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ProtectedRoutes from "../components/protectedRoutes/ProtectedRoutes";
 import Dashboard from "../pages/Dashboard";
+import ProductList from "../pages/ProductList";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
           <Route element={<ProtectedRoutes />}>
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
+          <Route path="/product-list" element={<ProductList />} />
         </Routes>
       </BrowserRouter>
     </>
