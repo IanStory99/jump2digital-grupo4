@@ -1,0 +1,12 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+  background: url("../assets/images/home2.jpg");
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container > img {
+  opacity: 50%;
+}
